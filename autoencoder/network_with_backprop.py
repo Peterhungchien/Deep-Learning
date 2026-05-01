@@ -36,7 +36,7 @@ class ReLU:
 
     def forward(self, input: np.ndarray) -> np.ndarray:
         self.input = input
-        return np.max(0, input)
+        return np.maximum(0, input)
 
     def backward(self, grad_output: np.ndarray) -> np.ndarray:
         grad_input = grad_output.copy()
